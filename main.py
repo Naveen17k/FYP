@@ -479,6 +479,7 @@ def view_hod1():
         return redirect(url_for('hodlog'))
     data1=""
     data3=""
+    msg=""
 
     staff_id = session.get('staff_id')
     cursor = mydb.cursor()
@@ -546,7 +547,7 @@ def view_hod1():
         cursor.close()
         return redirect(url_for('view_hod1'))
 
-    return render_template('view_hod1.html', allocated_reg_nos=allocated_reg_nos, fyp_staff_allocation=data3, unallocated_students=unallocated_students)
+    return render_template('view_hod1.html', allocated_reg_nos=allocated_reg_nos, fyp_staff_allocation=data3, unallocated_students=unallocated_students, msg=msg)
 
 
 

@@ -231,6 +231,21 @@
 						</div>
 						<div class="widget-inner">
 						<form class="edit-profile m-b30" name="form1" method="post" action="">
+						{% if msg=="success" %}
+				  <span style="color:#009933">Create successfully...</span>
+ <script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= '/viewhod';
+}, 4000);
+</script>
+
+				  {% endif %}
+				  {% if msg=="fail" %}
+				  <span style="color:#FF0000">Ooops try again</span>
+				  {% endif %}
+
     <div class="row">
         <div class="col-12 m-t20">
             <div class="ml-auto">
